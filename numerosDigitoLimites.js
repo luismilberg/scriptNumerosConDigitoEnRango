@@ -8,14 +8,12 @@ function poseeDigito (digito, numero){
     let resultado = 0;
     var valor = numero.toString();
     let cadena = valor.split('');
-
-    cadena.forEach(dig => {
-        if(dig === digito.toString()){
-            resultado = 1;
-            console.log('Valor encontrado', numero);
-            return resultado;
-        }
-    });
+    
+    if (cadena.includes(digito.toString())){
+        resultado = 1;
+        console.log('Valor encontrado', numero);
+        return resultado;
+    }
 
     return resultado;
 }
